@@ -29,6 +29,8 @@ public class Equipo {
 	String Equipo2 = "Costa Rica";
 	String Equipo3 = "Croacia";
 	String Equipo4 = "Alemania";
+	
+	//Getters and Setters
 	public String getEquipo1() {
 		return Equipo1;
 	}

@@ -7,13 +7,16 @@ public class Partido {
 		private Equipo equipo3;
 		private Equipo equipo4;
 		
+		//Metodo int
 	    //partido1
         private	int golesEquipo1 =  3;
-			
 		private int golesEquipo2 = 1;
 			
 		//partido2 
 		private int golesEquipo3 = 2;
+		private int golesEquipo4 = 2;
+		
+		//Getters and Setters
 		public Equipo getEquipo1() {
 			return equipo1;
 		}
@@ -62,7 +65,9 @@ public class Partido {
 		public void setGolesEquipo4(int golesEquipo4) {
 			this.golesEquipo4 = golesEquipo4;
 		}
-		private int golesEquipo4 = 2;
+		
+		
+		//Metodo constructor usando fields: Equipo (no se uso goles)
 		public Partido(Equipo equipo1, Equipo equipo2, Equipo equipo3, Equipo equipo4) {
 			super();
 			this.equipo1 = equipo1;
@@ -71,6 +76,31 @@ public class Partido {
 			this.equipo4 = equipo4;
 		}
 	
-	
+	   //Resultados
+	   //Primera ronda
+		public String resultado1(Equipo equipo1) 
+		{if (equipo1.equals(equipo2));
+			if (golesEquipo1 > golesEquipo2)
+			return "ganador";
+			return null;}
+		
+		public String resultado2(Equipo equipo2)
+		{if (equipo2.equals(equipo1));
+			if (golesEquipo2 > golesEquipo1)
+			return "ganador";
+			return null;}
+		
+		//Segunda ronda
+		public String resultado3(Equipo equipo3) 
+		{if (equipo3.equals(equipo4));
+			if (golesEquipo3 > golesEquipo4)
+			return "ganador";
+			return null;}
+		
+		public String resultado4(Equipo equipo4) 
+		{if (equipo4.equals(equipo3));
+			if (golesEquipo4 > golesEquipo3)
+			return "ganador";
+			return null;}
 	
 }
